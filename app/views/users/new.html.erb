@@ -1,3 +1,11 @@
+<%= form_for @user do |f| %>
+  Username:</br><%= f.text_field :username, placeholder: "Your username" %></br>
+  Email:</br> <%= f.text_field :email, placeholder: "example@example.com" %></br>
+  Password:</br> <%= f.text_field :password, placeholder: "Your password" %></br>
+  </br><%= f.submit 'Submit'%></br>
+<% end %>
+
+
 <!--
 <form accept-charset="UTF-8" action="/users" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
@@ -11,6 +19,7 @@
 </form>
 -->
 
+<!-- 
 <%= form_tag("/users", method: "post") do %>
   <%= label_tag(:username, "Username:") %></br>
   <%= text_field_tag(:username) %></br>
@@ -19,4 +28,5 @@
   <%= label_tag(:password, "Password:") %></br>
   <%= password_field_tag(:password) %></br>
   <%= submit_tag('Create new user') %></br>
-<% end %>
+<% end %> 
+-->
