@@ -1,3 +1,10 @@
+<%if @user.errors.any?%>
+  <p>The fields are mandotory</p>
+  <% @user.errors.full_messages.each do |e|%>
+    <ul style="color:red"><%= e %></ul>
+    <% end %>
+<% end%>
+
 <%= form_for @user do |f| %>
   Username:</br><%= f.text_field :username, placeholder: "Your username" %></br>
   Email:</br> <%= f.text_field :email, placeholder: "example@example.com" %></br>
