@@ -22,7 +22,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @user.update(user_params)
 
-    redirect_to user_path(@user)
+    redirect_to edit_user_path
   end
 
   private
