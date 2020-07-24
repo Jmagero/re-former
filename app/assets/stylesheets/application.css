@@ -13,3 +13,10 @@
  *= require_tree .
  *= require_self
  */
+
+
+.form_wrapper {
+  background-color: burlywood;
+  width: 1200px;
+  
+}

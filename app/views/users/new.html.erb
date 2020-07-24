@@ -1,10 +1,12 @@
-<!-- <%if @user.errors.any?%>
+
+<div class="form_wrap">
+<%if @user.errors.any?%>
   <p>The fields are mandotory</p>
   <% @user.errors.full_messages.each do |e|%>
     <ul style="color:red"><%= e %></ul>
     <% end %>
 <% end%>
-
+</div>
 
 <%= form_for @user do |f| %>
   Username:</br><%= f.text_field :username, placeholder: "Your username" %></br>
@@ -12,10 +14,12 @@
   Password:</br> <%= f.password_field :password, placeholder: "Your password" %></br>
   </br><%= f.submit 'Submit'%></br>
 <% end %>
--->
 
 
-<!--<form accept-charset="UTF-8" action= "users_path" method="post">
+
+<!--
+
+  <form accept-charset="UTF-8" action= "users_path" method="post">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
   <label for="username">Username:</label>
   <input type="text" id="username" name="user[username]"><br><br>
@@ -25,9 +29,11 @@
   <input type="password" id="password" name="user[password]"><br><br>
   <input type="submit" value="Submit">
 </form> 
--->
 
-<%= form_tag "user_path", method: "post" do %>
+
+
+<div class="body">
+<%= form_tag("/users", method: "post") do %>
   <%= label_tag(:username, "Username:") %></br>
   <%= text_field_tag(:username) %></br>
   <%= label_tag(:email, "Email:") %></br>
@@ -36,5 +42,7 @@
   <%= password_field_tag(:password) %></br>
   <%= submit_tag('Create new user') %></br>
 <% end %>
+</div>
 
-<%= link_to "Edit", edit_user_path(@user) %>
+-->
+
