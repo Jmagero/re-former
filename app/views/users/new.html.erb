@@ -33,7 +33,7 @@
 
 
 <div class="body">
-<%= form_tag("/users", method: "post") do %>
+<%= form_tag("users_path", method: "post") do %>
   <%= label_tag(:username, "Username:") %></br>
   <%= text_field_tag(:username) %></br>
   <%= label_tag(:email, "Email:") %></br>
