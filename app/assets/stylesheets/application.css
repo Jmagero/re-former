@@ -14,9 +14,34 @@
  *= require_self
  */
 
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(71, 106, 136);
+  font-weight: 700;
+  background-color: rgb(220, 223, 226);
+}
 
 .form_wrapper {
-  background-color: burlywood;
+  background-color: rgba(240, 246, 248, 0.671);
   width: 1200px;
-  
+  height: 100vh;
+  margin: 0 auto;
+}
+
+table, th, td {
+  border: 1px solid white;
+}
+
+th {
+  width: 420px;
+  background-color: aliceblue;
+}
+
+td {
+  padding: 30px;
+    background-color: aliceblue;
+}
+
+.edit-btn {
+  width: 212px;
 }

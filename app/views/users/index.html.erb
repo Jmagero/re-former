@@ -1,6 +1,19 @@
-<% @user.each do |u| %>
-  <%= u.username%>
-  <%= u.email %>
-  <%= link_to "Edit", edit_user_path(u) %>
-<%end%>
+<table>
+  <tr>
+      <th>Username</th>
+      <th>Email</th>
+      <th>Edit</th>
+    </tr>
+    <% @user.each do |u| %>
+    <tr>
+      <td><%= u.username %></td>
+      <td><%= u.email %></td>
+      <td class="edit-btn"><%= link_to "Edit", edit_user_path(u) %> </br></td>
+    </tr>
+    <%end%>
+  </table> 
+  
+
+
+<%= link_to "Create New User", new_user_path %>
 
